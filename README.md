@@ -12,6 +12,7 @@ SQL (Structured Query Language) is used to store, retrieve, update, and manage d
  1. 1970 – The Birth of Relational Databases <br>
   - E.F. Codd, a British computer scientist at IBM, published a groundbreaking paper titled  <br>
     "A Relational Model of Data for Large Shared Data Banks".  <br>
+    
   - This introduced the concept of relational databases, where data is stored in tables.  <br>
 
 <hr>
