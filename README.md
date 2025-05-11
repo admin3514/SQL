@@ -10,8 +10,7 @@ SQL (Structured Query Language) is used to store, retrieve, update, and manage d
 
 ✅ **SQL Data Types (Summary)** <br>
 
-🔹 *1. Numeric Types* <br>
-Used to store numbers. <br>
+🔹 *1. Numeric Types : Used to store numbers.* <br>
 
 ```ssh
 | Type             | Description              | Example    |
@@ -22,8 +21,7 @@ Used to store numbers. <br>
 |  FLOAT` /  REAL  | Approximate decimals     | 12.345     |
 ```
 
-🔹 *2. String (Text) Types* <br>
-Used to store characters and text. <br>
+🔹 *2. String (Text) Types : Used to store characters and text.* <br>
 
 ```ssh
 | Type         | Description            | Example         |
@@ -33,8 +31,7 @@ Used to store characters and text. <br>
 |  TEXT        | Long text              | Notes, articles |
 ```
 
-🔹 *3. Date & Time Types* <br>
-Used to store dates and times. <br>
+🔹 *3. Date & Time Types : Used to store dates and times.* <br>
 
 ```ssh
 | Type        | Description            | Example               |
@@ -45,8 +42,7 @@ Used to store dates and times. <br>
 |  TIMESTAMP  | Auto-recorded datetime | (current timestamp)   |
 ```
 
-🔹 *4. Boolean Type*  <br>
-Stores true/false values.  <br>
+🔹 *4. Boolean Type : Stores true/false values.*  <br>
 
 ```ssh
 | Type      | Description   | Example |
@@ -54,8 +50,7 @@ Stores true/false values.  <br>
 |  BOOLEAN  | TRUE or FALSE | TRUE    |
 ```
 
-🔹 *5. Binary Types*  <br>
-Used to store binary files like images, audio.  <br>
+🔹 *5. Binary Types : Used to store binary files like images, audio.*  <br>
 
 ```ssh
 | Type        | Description                  |
