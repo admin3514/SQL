@@ -8,6 +8,64 @@ SQL (Structured Query Language) is used to store, retrieve, update, and manage d
 
 <hr>
 
+✅ **SQL Data Types (Summary)** <br>
+
+🔹 *1. Numeric Types* <br>
+Used to store numbers. <br>
+
+```ssh
+| Type             | Description              | Example    |
+| ---------------- | ------------------------ | ---------- |
+|  INT             | Whole numbers            | 100, -25   |
+|  BIGINT          | Very large whole numbers | 1234567890 |
+|  DECIMAL(p,s)    | Exact decimal values     | 99.99      |
+|  FLOAT` /  REAL  | Approximate decimals     | 12.345     |
+```
+
+🔹 *2. String (Text) Types* <br>
+Used to store characters and text. <br>
+
+```ssh
+| Type         | Description            | Example         |
+| ------------ | ---------------------- | --------------- |
+|  CHAR(n)     | Fixed-length string    | 'abc   '        |
+|  VARCHAR(n)  | Variable-length string | 'Hello'         |
+|  TEXT        | Long text              | Notes, articles |
+```
+
+🔹 *3. Date & Time Types* <br>
+Used to store dates and times. <br>
+
+```ssh
+| Type        | Description            | Example               |
+| ----------- | ---------------------- | --------------------- |
+|  DATE       | Only date              | '2025-05-11'          |
+|  TIME       | Only time              | '14:30:00'            |
+|  DATETIME   | Date and time          | '2025-05-11 14:30:00' |
+|  TIMESTAMP  | Auto-recorded datetime | (current timestamp)   |
+```
+
+🔹 *4. Boolean Type*  <br>
+Stores true/false values.  <br>
+
+```ssh
+| Type      | Description   | Example |
+| --------- | ------------- | ------- |
+|  BOOLEAN  | TRUE or FALSE | TRUE    |
+```
+
+🔹 *5. Binary Types*  <br>
+Used to store binary files like images, audio.  <br>
+
+```ssh
+| Type        | Description                  |
+| ----------- | ---------------------------- |
+|  BLOB      | Binary Large Object (images)  |
+|  VARBINARY | Variable binary data          |
+```
+
+<hr>
+
 ✅ **2. SQL Categories** <br>
 
 ```ssh
@@ -165,4 +223,30 @@ SELECT name
 FROM employees
 WHERE salary > (SELECT AVG(salary)
 FROM employees);
+```
+
+<hr>
+
+✅ **What is a Nested Subquery?**
+
+A nested subquery (also called an inner query) is a query within another query. It is placed inside a WHERE, HAVING, or FROM clause of another SQL statement. <br>
+Nested subqueries are used when you want to use the result of one query to filter or process another. <br>
+
+<hr>
+
+✅ **12. Indexes**
+
+Indexes improve the speed of data retrieval. <br>
+```ssh
+CREATE INDEX idx_name ON employees(name);
+```
+
+<hr>
+
+✅ **13. Views**
+
+A virtual table based on the result of a query.  <br>
+```ssh
+CREATE VIEW high_salary AS
+SELECT name, salary FROM employees WHERE salary > 50000;
 ```
