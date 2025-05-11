@@ -85,3 +85,73 @@ SELECT name, salary FROM employees WHERE salary > 50000;
  - HAVING: Filter groups (used with GROUP BY)  <br>
  - DISTINCT: Remove duplicates  <br>
  - LIMIT: Restrict the number of rows  <br>
+
+<hr>
+
+✅ **6. DCL (Data Control Language)** 
+
+🔹 *GRANT :* Give privileges
+```ssh
+GRANT SELECT, INSERT ON employees TO 'user1';
+```
+
+🔹 *REVOKE :* Take back privileges
+```ssh
+REVOKE SELECT ON employees FROM 'user1';
+```
+
+<hr>
+
+✅ **7. TCL (Transaction Control Language)**
+
+Used to manage transactions in SQL. <br>
+ - COMMIT: Save changes permanently  <br>
+ - ROLLBACK: Undo changes since last COMMIT  <br>
+ - SAVEPOINT: Mark a point to roll back to  <br>
+
+```ssh
+BEGIN;
+UPDATE employees SET salary = 60000 WHERE id = 2;
+SAVEPOINT s1;
+DELETE FROM employees WHERE id = 3;
+ROLLBACK TO s1;
+COMMIT;
+```
+
+<hr>
+
+✅ **8. SQL Constraints**
+
+```ssh
+| Constraint    | Description                                 |
+| ------------- | ------------------------------------------- |
+|  PRIMARY KEY  | Uniquely identifies each row                |
+|  FOREIGN KEY  | Links two tables                            |
+|  UNIQUE       | Ensures all values are different            |
+|  NOT NULL     | Disallows NULL values                       |
+|  CHECK        | Limits values in a column                   |
+|  DEFAULT      | Assigns a default value if none is provided |
+```
+
+<hr>
+
+✅ **9. SQL Joins**
+
+Used to combine rows from two or more tables based on related columns. <br>
+
+```ssh
+| Join Type      | Description                                         |
+| -------------- | --------------------------------------------------- |
+|   INNER JOIN   | Returns records with matching values in both tables |
+|   LEFT JOIN    | All records from left, matching from right          |
+|   RIGHT JOIN   | All records from right, matching from left          |
+|   FULL JOIN    | All records from both tables                        |
+```
+
+```ssh
+SELECT e.name, d.dept_name 
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.id;
+```
+
+<hr>
