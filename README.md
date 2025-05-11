@@ -155,3 +155,14 @@ INNER JOIN departments d ON e.dept_id = d.id;
 ```
 
 <hr>
+
+
+✅ **10. Subqueries**
+
+A query inside another query. Can be used in SELECT, FROM, or WHERE clauses.  <br>
+```ssh
+SELECT name
+FROM employees
+WHERE salary > (SELECT AVG(salary)
+FROM employees);
+```
